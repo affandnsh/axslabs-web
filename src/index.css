@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: #FAF0E6;
+    color: #2E2E2E;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF0E6;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D8959B;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8E4A4D;
+  }
+}
+
+@layer components {
+  /* Premium Glassmorphism */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.42);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 30px -10px rgba(142, 74, 77, 0.08);
+  }
+
+  .glass-card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-card-hover:hover {
+    background: rgba(255, 255, 255, 0.65);
+    border-color: rgba(199, 115, 137, 0.35);
+    box-shadow: 0 20px 40px -12px rgba(142, 74, 77, 0.16);
+    transform: translateY(-4px);
+  }
+
+  .glass-nav {
+    background: rgba(250, 240, 230, 0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(143, 138, 135, 0.15);
+  }
+
+  .glass-pill {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+
+  .soft-border {
+    border-color: rgba(143, 138, 135, 0.22);
+  }
+}
+
+/* Subtle background glowing orbs */
+.orb-glow {
+  filter: blur(80px);
+  opacity: 0.5;
+  pointer-events: none;
+}
